@@ -1,0 +1,32 @@
+// script.js
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const formMessage = document.getElementById('form-message');
+
+    if (contactForm) {
+        contactForm.addEventListener('submit', (event) => {
+            event.preventDefault(); // Impede o envio padrão do formulário
+
+            // Aqui você pode adicionar lógica para enviar os dados para um servidor,
+            // mas para este exemplo, vamos apenas simular o envio.
+
+            const name = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('mensagem').value;
+
+            // Simula um envio bem-sucedido
+            formMessage.textContent = `Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`;
+            formMessage.style.backgroundColor = '#d4edda';
+            formMessage.style.color = '#155724';
+
+            // Limpa o formulário após 3 segundos
+            setTimeout(() => {
+                contactForm.reset();
+                formMessage.textContent = '';
+                formMessage.style.backgroundColor = 'transparent';
+                formMessage.style.color = 'initial';
+            }, 3000);
+        });
+    }
+});

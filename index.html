@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultura Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agricultura Sustentável</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <img src="images/hero-image.jpg" alt="Campo verde com trator">
+            <div class="hero-content">
+                <h2>Cultivando o Futuro com Responsabilidade</h2>
+                <p>Nossa missão é promover práticas agrícolas inovadoras e sustentáveis para um planeta mais saudável.</p>
+                <a href="#sobre" class="btn">Saiba Mais</a>
+            </div>
+        </section>
+
+        <section id="sobre" class="content-section">
+            <h2>Sobre Nós</h2>
+            <div class="about-grid">
+                <div class="about-item">
+                    <img src="images/fazenda.jpg" alt="Visão aérea de uma fazenda">
+                    <h3>Nossa História</h3>
+                    <p>Desde 1990, dedicamos nosso trabalho à produção de alimentos de qualidade, respeitando o meio ambiente e as comunidades locais.</p>
+                </div>
+                <div class="about-item">
+                    <img src="images/sustentabilidade.jpg" alt="Mãos segurando uma planta jovem">
+                    <h3>Sustentabilidade</h3>
+                    <p>Acreditamos que a agricultura pode ser produtiva e sustentável. Utilizamos técnicas de conservação do solo e da água.</p>
+                </div>
+                <div class="about-item">
+                    <img src="images/inovacao.jpg" alt="Tecnologia na agricultura">
+                    <h3>Inovação</h3>
+                    <p>Investimos em tecnologia e pesquisa para otimizar nossos processos e garantir a eficiência em todas as etapas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicos" class="content-section">
+            <h2>Nossos Serviços</h2>
+            <div class="services-list">
+                <ul>
+                    <li>Consultoria Agronômica</li>
+                    <li>Manejo Integrado de Pragas</li>
+                    <li>Análise de Solo</li>
+                    <li>Agricultura de Precisão</li>
+                    <li>Educação e Treinamento</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contato" class="content-section">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div id="form-message"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Agricultura Sustentável. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
