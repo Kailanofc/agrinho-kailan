@@ -3,86 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agricultura Sustentável</title>
+    <title>Cultivo Vivo - Agricultura Sustentável</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Agricultura Sustentável</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1 class="logo">Cultivo Vivo</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <section id="inicio" class="hero">
-            <img src="images/hero-image.jpg" alt="Campo verde com trator">
-            <div class="hero-content">
-                <h2>Cultivando o Futuro com Responsabilidade</h2>
-                <p>Nossa missão é promover práticas agrícolas inovadoras e sustentáveis para um planeta mais saudável.</p>
-                <a href="#sobre" class="btn">Saiba Mais</a>
+        <section id="inicio" class="hero-section">
+            <div class="hero-overlay"></div>
+            <img src="images/hero-campo.jpg" alt="Campo verde exuberante ao pôr do sol" class="hero-image">
+            <div class="hero-content container">
+                <h2>Plantando o Futuro, Colhendo Sustentabilidade</h2>
+                <p>Nossa paixão é a terra, nosso compromisso é com você e o planeta. Descubra práticas agrícolas que nutrem a vida.</p>
+                <a href="#servicos" class="btn">Conheça Nossos Serviços</a>
             </div>
         </section>
 
-        <section id="sobre" class="content-section">
-            <h2>Sobre Nós</h2>
-            <div class="about-grid">
-                <div class="about-item">
-                    <img src="images/fazenda.jpg" alt="Visão aérea de uma fazenda">
-                    <h3>Nossa História</h3>
-                    <p>Desde 1990, dedicamos nosso trabalho à produção de alimentos de qualidade, respeitando o meio ambiente e as comunidades locais.</p>
-                </div>
-                <div class="about-item">
-                    <img src="images/sustentabilidade.jpg" alt="Mãos segurando uma planta jovem">
-                    <h3>Sustentabilidade</h3>
-                    <p>Acreditamos que a agricultura pode ser produtiva e sustentável. Utilizamos técnicas de conservação do solo e da água.</p>
-                </div>
-                <div class="about-item">
-                    <img src="images/inovacao.jpg" alt="Tecnologia na agricultura">
-                    <h3>Inovação</h3>
-                    <p>Investimos em tecnologia e pesquisa para otimizar nossos processos e garantir a eficiência em todas as etapas.</p>
+        <section id="sobre" class="about-section content-section">
+            <div class="container">
+                <h2>Quem Somos</h2>
+                <div class="about-grid">
+                    <div class="about-item">
+                        <img src="images/about-missao.jpg" alt="Mãos plantando uma muda">
+                        <h3>Nossa Missão</h3>
+                        <p>Promover uma agricultura consciente e eficiente, que garanta a produção de alimentos saudáveis e preserve os recursos naturais para as futuras gerações.</p>
+                    </div>
+                    <div class="about-item">
+                        <img src="images/about-valores.jpg" alt="Pessoas trabalhando em uma horta">
+                        <h3>Nossos Valores</h3>
+                        <p>Integridade, inovação, respeito ao meio ambiente e valorização do produtor rural são os pilares que nos guiam em cada ação.</p>
+                    </div>
+                    <div class="about-item">
+                        <img src="images/about-visao.jpg" alt="Visão aérea de plantações organizadas">
+                        <h3>Nossa Visão</h3>
+                        <p>Ser referência em soluções agrícolas sustentáveis, contribuindo para um sistema alimentar mais resiliente e justo em todo o mundo.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="servicos" class="content-section">
-            <h2>Nossos Serviços</h2>
-            <div class="services-list">
-                <ul>
-                    <li>Consultoria Agronômica</li>
-                    <li>Manejo Integrado de Pragas</li>
-                    <li>Análise de Solo</li>
-                    <li>Agricultura de Precisão</li>
-                    <li>Educação e Treinamento</li>
-                </ul>
+        <section id="servicos" class="services-section content-section bg-light-green">
+            <div class="container">
+                <h2>Nossos Serviços</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <img src="images/service-consultoria.jpg" alt="Técnico agrônomo em campo">
+                        <h3>Consultoria Agronômica</h3>
+                        <p>Orientação especializada para otimizar sua produção e garantir a saúde do solo e das culturas.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service-precisao.jpg" alt="Drone sobrevoando lavoura">
+                        <h3>Agricultura de Precisão</h3>
+                        <p>Uso de tecnologia para maximizar rendimentos, reduzir custos e minimizar impactos ambientais.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service-organico.jpg" alt="Vegetais frescos orgânicos">
+                        <h3>Cultivo Orgânico</h3>
+                        <p>Apoio na transição e implementação de métodos de cultivo orgânico e biodinâmico.</p>
+                    </div>
+                    <div class="service-card">
+                        <img src="images/service-irrigacao.jpg" alt="Sistema de irrigação em campo">
+                        <h3>Sistemas de Irrigação</h3>
+                        <p>Planejamento e instalação de sistemas de irrigação eficientes e sustentáveis para sua lavoura.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contato" class="content-section">
-            <h2>Entre em Contato</h2>
-            <form id="contact-form">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+        <section id="galeria" class="gallery-section content-section">
+            <div class="container">
+                <h2>Nossa Galeria</h2>
+                <div class="image-gallery">
+                    <img src="images/galeria-1.jpg" alt="Mãos colhendo legumes">
+                    <img src="images/galeria-2.jpg" alt="Plantas jovens crescendo">
+                    <img src="images/galeria-3.jpg" alt="Fazendeiro inspecionando colheita">
+                    <img src="images/galeria-4.jpg" alt="Trator arando a terra">
+                    <img src="images/galeria-5.jpg" alt="Campo de girassóis">
+                    <img src="images/galeria-6.jpg" alt="Frutas e vegetais em cesta">
+                </div>
+            </div>
+        </section>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-                <button type="submit">Enviar Mensagem</button>
-            </form>
-            <div id="form-message"></div>
+        <section id="contato" class="contact-section content-section bg-dark-green">
+            <div class="container">
+                <h2>Fale Conosco</h2>
+                <p class="contact-intro">Envie-nos uma mensagem e teremos prazer em ajudar você a cultivar um futuro mais verde.</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Enviar Mensagem</button>
+                    <div id="form-message" class="form-message"></div>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Agricultura Sustentável. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>&copy; 2025 Cultivo Vivo. Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

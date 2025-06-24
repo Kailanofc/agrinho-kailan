@@ -1,32 +1,62 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('nav ul li a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - document.querySelector('header').offsetHeight, // Ajusta para o cabeçalho fixo
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Contact Form Submission Handling
     const contactForm = document.getElementById('contact-form');
     const formMessage = document.getElementById('form-message');
 
-    if (contactForm) {
+    if (contactForm && formMessage) {
         contactForm.addEventListener('submit', (event) => {
-            event.preventDefault(); // Impede o envio padrão do formulário
+            event.preventDefault(); // Prevents the default form submission
 
-            // Aqui você pode adicionar lógica para enviar os dados para um servidor,
-            // mas para este exemplo, vamos apenas simular o envio.
+            // In a real-world scenario, you would send this data to a server
+            // using Fetch API or XMLHttpRequest. For this example, we'll simulate it.
 
             const name = document.getElementById('nome').value;
             const email = document.getElementById('email').value;
+            const subject = document.getElementById('assunto').value;
             const message = document.getElementById('mensagem').value;
 
-            // Simula um envio bem-sucedido
-            formMessage.textContent = `Obrigado, ${name}! Sua mensagem foi enviada com sucesso.`;
-            formMessage.style.backgroundColor = '#d4edda';
-            formMessage.style.color = '#155724';
+            // Simple validation (can be more robust)
+            if (!name || !email || !subject || !message) {
+                formMessage.textContent = 'Por favor, preencha todos os campos do formulário.';
+                formMessage.style.backgroundColor = '#f8d7da'; // Light red for error
+                formMessage.style.color = '#721c24'; // Dark red for error text
+                formMessage.classList.add('show');
+                return;
+            }
 
-            // Limpa o formulário após 3 segundos
+            // Simulate successful submission
+            formMessage.textContent = `Obrigado, ${name}! Sua mensagem foi enviada com sucesso. Em breve entraremos em contato.`;
+            formMessage.style.backgroundColor = '#d4edda'; // Light green for success
+            formMessage.style.color = '#155724'; // Dark green for success text
+            formMessage.classList.add('show');
+
+            // Clear the form after a short delay
             setTimeout(() => {
-                contactForm.reset();
+                contactForm.reset(); // Resets all form fields
+                formMessage.classList.remove('show');
                 formMessage.textContent = '';
                 formMessage.style.backgroundColor = 'transparent';
                 formMessage.style.color = 'initial';
-            }, 3000);
+            }, 5000); // Message disappears after 5 seconds
         });
     }
 });
